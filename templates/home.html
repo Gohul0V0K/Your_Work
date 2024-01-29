@@ -11,21 +11,28 @@
     #banner {
       height: 400px;
       width: 100%;
+      margin-bottom:20px;
     }
   </style>
 </head>
 
 <body>
+  {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="static/banner.jpg" alt="loading">
   <div class="container">
-    <h1 class="text-center mt-2 mb-4">Your Work</h1>
-    <img class="img-fluid" id="banner" src="static/banner.jpg" alt="loading">
-
-    <h2 class="text-center mt-2 mb-4">About Us</h2>
+    <h1 class="text-center mt-2 mb-4">Your Work Career</h1>
+  <div class="row">
+    <div class="col-md-6">
     <p class="lead mt-2 mb-4">Welcome to YourWork, where we believe in the transformative power of connecting individuals with their ideal careers. Our mission is to empower job seekers on their journey to professional fulfillment by providing a seamless platform that simplifies the job search process.
 
       At YourWork, we understand the challenges that come with navigating the dynamic landscape of employment. We are committed to being your partner in success, offering a comprehensive range of resources, tools, and opportunities to guide you toward the job that aligns with your skills, aspirations, and values.</p>
+    </div>
+    <div class="d-none d-md-block col-md-6">
+    <img src="static/people.jpg" alt="loading" style="height:320px; border-radius:5px;">
+    </div>
+  </div>
 
-    <h2 class="text-center mt-2 mb-4">Job Openings</h2>
+    <h2 class="text-center mt-2 mb-4">Open positions</h2>
 
     <div>
       {% for job in jobs %}
@@ -33,6 +40,7 @@
       {% endfor %}
     </div>
   </div>
+  {% include 'footer.html' %}
 
 </body>
 
