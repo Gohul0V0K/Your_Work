@@ -1,5 +1,5 @@
-from flask import Flask,render_template
-from database import load_jobs
+from flask import Flask,render_template,jsonify
+from database import load_jobs,load_job_db
 
 app=Flask(__name__)
 
@@ -11,7 +11,14 @@ def hello():
   Jobs=load_jobs()
   return render_template("home.html",jobs=Jobs)
   
-
+@app.route("/job/<id>")
+def dynamic_job_page(id):
+  try:
+    jobs=load_job_db(id)
+  except IndexError as e:
+    return render_template("404.html")
+    
+  return render_template('jobpage.html',job=jobs)
 
 
 if __name__=="__main__":

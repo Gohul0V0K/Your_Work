@@ -14,3 +14,11 @@ def load_jobs():
 
   return result
 
+def load_job_db(id):
+  columns = '*'
+  condition = {'id': id}
+
+  response = list(supabase.table('jobs').select(columns).eq('id', id).execute())
+
+  return response[0][1][0]
+  
