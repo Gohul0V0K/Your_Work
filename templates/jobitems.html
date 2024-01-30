@@ -7,6 +7,6 @@
     {% endif %}
   </div>
   <div class="col-3">
-    <a href="mailto:company address?subject=Apply%20for%20{{job['title']}}&body=Name%3A%23Enter%20your%20name%0D%0A%0D%0AResume%3A%23Enter%20your%20resume%20link%0D%0A%0D%0A%0D%0A%23Continue%20for%20any%20other%20detail" type="button" class="btn btn-outline-primary float-right align-middle">Apply</a>
+    <a href="mailto:{{job['email']}}?subject=Apply%20for%20the%20postion%20of%20{{job['title']}}&body=Name%20%3A%20%23Enter%20your%20name%0D%0AEmail%20%3A%20%23Enter%20your%20email-address%0D%0AContact-info%20%3A%20%23Enter%20your%20contact%20information%0D%0AResume%20%3A%20%23%20Enter%20your%20resume%0D%0A%23Enter%20your%20other%20Details" type="button" class="btn btn-outline-primary float-right align-middle">Apply</a>
   </div>
 </div>
