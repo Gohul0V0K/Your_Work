@@ -12,6 +12,11 @@
         width: 100%;
         margin-bottom:20px;
       }
+
+      p{
+        font-size:20px;
+        font-weight:normal;
+      }
     </style>
   </head>
 
@@ -19,20 +24,24 @@
      {% include 'nav.html' %}
    <img src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="banner"/>
     <div class="container">
-    <h3>Title</h3>
-    <p>{{job['title']}}</p>
-
-    <h3>Location</h3>
-    <p>{{job['location']}}</p>
-
-    <h3>Salary</h3>
-    <p>{{job['salary']}}</p>
-
-    <h3>Responsibility</h3>
-    <p>{{job['responsibility']}}</p>
-
-    <h3>Requirement</h3>
-    <p>{{job['requirement']}}</p>
+      <h1 class="text-center mt-2 mb-4">Your Work</h1>
+      <h4>Job Title</h4>
+      <p>{{job['title']}}</p>
+  
+      <h4>Location</h4>
+      <p>{{job['location']}}</p>
+  
+      <h4>Salary</h4>
+      <p>Rs.{{job['salary']}}</p>
+  
+      <h4>Responsibility</h4>
+      <p>{{job['responsibility']}}</p>
+  
+      <h4>Requirement</h4>
+      <p>{{job['requirement']}}</p>
+      
+       <a href="/job/{{job['id']}}/apply" type="button" class="btn btn-outline-primary float-right align-middle">Apply</a>
+      
     </div>
     {% include 'footer.html' %}
   </body>

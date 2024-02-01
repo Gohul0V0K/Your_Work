@@ -21,4 +21,19 @@ def load_job_db(id):
   response = list(supabase.table('jobs').select(columns).eq('id', id).execute())
 
   return response[0][1][0]
+
+
+
+def add_application(data):
+  data_to_insert=[{
+    'job_id':data['job_id'],
+    'job_title':data['job_title'],
+    'name':data['fullname'],
+    'email':data['email'],
+    'linked_in_url':data['linkedin']
+  }]
+
+   
+  response=supabase.table('application').insert(data_to_insert).execute()
+  
   
