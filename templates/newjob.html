@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add job - Your Work</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+      #banner {
+        height: 400px;
+        width: 100%;
+        margin-bottom:20px;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="static/banner.jpg" alt="loading">
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Your Work</h1>
+      <h4>Add a job</h4>
+      <form action="/newjob/submitted" method='post'>
+        <div class="mb-2">
+          <label>Title</label><br>
+          <input type="text" placeholder="Software Engineer" name="title" required>
+        </div>
+
+        <div class="mb-2">
+          <label>Location</label><br>
+          <input type="text" placeholder="India" name="location" required>
+        </div> 
+
+        <div class="mb-2">
+          <label>Salary</label><br>
+          <input type="number" placeholder="10000" name="salary" required>
+        </div>
+      
+        <div class="mb-2">
+          <label>E-mail</label><br>
+          <input type="email" placeholder="xyz@gmail.com" name="email" required>
+        </div>
+      
+        <div class="mb-2">
+          <label>Responsibility</label><br>
+          <textarea type="text" rows="4" cols="100" placeholder="Enter the key points" name="responsibility" required></textarea>
+        </div>
+      
+        <div class="mb-2">
+          <label>Requirement</label><br>
+          <textarea type="text" rows="4" cols="100" placeholder="Enter your Requirement" name="requirement" required></textarea>
+        </div>
+
+        <center><input type="submit"></center>
+      </form>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>

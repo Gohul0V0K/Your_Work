@@ -32,9 +32,10 @@
     <img src="static/people.jpg" alt="loading" style="height:320px; border-radius:5px;">
     </div>
   </div>
+    <br>
 
+    <a href="/newjob" type="button" class="btn btn-outline-primary ">Add a new job</a>
     <h2 class="text-center mt-2 mb-4">Open positions</h2>
-
     <div id="jobs">
       {% for job in jobs %}
         {% include 'jobitems.html'%}

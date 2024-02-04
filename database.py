@@ -36,4 +36,16 @@ def add_application(data):
    
   response=supabase.table('application').insert(data_to_insert).execute()
   
-  
+
+
+def add_job(data):
+  data_to_insert=[{
+    'title':data['title'],
+    'location':data['location'],
+    'salary':data['salary'],
+    'email':data['email'],
+    'responsibility':data['responsibility'],
+    'requirement':data['requirement']
+  }]
+
+  response=supabase.table('jobs').insert(data_to_insert).execute()
