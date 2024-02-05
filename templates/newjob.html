@@ -10,7 +10,25 @@
       #banner {
         height: 400px;
         width: 100%;
-        margin-bottom:20px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        textarea {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 992px) {
+        textarea {
+          width: 80%;
+        }
+      }
+
+      @media (min-width: 993px) {
+        textarea {
+          width: 60%;
+        }
       }
     </style>
   </head>
@@ -43,12 +61,12 @@
       
         <div class="mb-2">
           <label>Responsibility</label><br>
-          <textarea type="text" rows="4" cols="100" placeholder="Enter the key points" name="responsibility" required></textarea>
+          <textarea type="text" rows="4" cols="auto" placeholder="Enter the key points" name="responsibility" required></textarea>
         </div>
       
         <div class="mb-2">
           <label>Requirement</label><br>
-          <textarea type="text" rows="4" cols="100" placeholder="Enter your Requirement" name="requirement" required></textarea>
+          <textarea type="text" rows="4" cols="auto" placeholder="Enter your Requirement" name="requirement" required></textarea>
         </div>
         <p style="color:red;">*All the field need to be filled </p>
 

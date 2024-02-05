@@ -49,3 +49,4 @@ def add_job(data):
   }]
 
   response=supabase.table('jobs').insert(data_to_insert).execute()
+

@@ -47,5 +47,9 @@ def job_submited():
   
   return render_template('newjob_submitted.html',data=data)
 
+@app.route("/signup")
+def signup():
+  return render_template('/signup.html')
+
 if __name__=="__main__":
   app.run(host='0.0.0.0',debug=True)
